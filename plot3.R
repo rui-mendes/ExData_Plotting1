@@ -16,3 +16,5 @@ subsetData <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 aux <- as.Date(subsetData$Date, format="%d/%m/%Y")
 datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
 
+## Create the plot with the Sub_metering_1 field
+plot(datetime, subsetData$Sub_metering_1, xlab="", ylab="Energy sub metering", type="l")
