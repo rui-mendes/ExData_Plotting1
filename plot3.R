@@ -18,3 +18,6 @@ datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
 
 ## Create the plot with the Sub_metering_1 field
 plot(datetime, subsetData$Sub_metering_1, xlab="", ylab="Energy sub metering", type="l")
+
+## Add lines of Sub_metering_2 field to the graphic 
+lines(datetime, subsetData$Sub_metering_2, xlab="", ylab="Energy sub metering", type="l", col="Red")
