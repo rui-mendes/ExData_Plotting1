@@ -16,3 +16,10 @@ subsetData <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 aux <- as.Date(subsetData$Date, format="%d/%m/%Y")
 datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
 
+
+## Create the plot
+plot(datetime, subsetData$Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type="l")
+
+## Create the histogram file (to png format)
+dev.copy(png, file="plot2.png")
+dev.off()
