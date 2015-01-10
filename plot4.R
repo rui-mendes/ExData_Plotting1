@@ -18,3 +18,6 @@ datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
 
 ## Set mfrow graphical parameter to be 2x2 dimension for plotting 4 graphics in the same window
 par(mfrow=c(2,2))
+
+## Plot 1st graphich (Global_active_power field)
+plot(datetime, subsetData$Global_active_power, xlab="", ylab="Global Active Power", type="l")
