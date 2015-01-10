@@ -27,3 +27,7 @@ lines(datetime, subsetData$Sub_metering_3, xlab="", ylab="Energy sub metering", 
 
 # Place the legend at the appropriate place and put text in it
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("Black", "Red", "Blue"), cex = 0.75, lwd=c(1,1,1), text.col=c("black")) 
+
+## Create the file with the graphic image (to png format)
+dev.copy(png, file="plot3.png")
+dev.off()
