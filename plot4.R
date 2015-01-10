@@ -21,3 +21,6 @@ par(mfrow=c(2,2))
 
 ## Plot 1st graphich (Global_active_power field)
 plot(datetime, subsetData$Global_active_power, xlab="", ylab="Global Active Power", type="l")
+
+## Plot 2nd graphich (Voltage field)
+plot(datetime, subsetData$Voltage, ylab="Voltage", type="l")
