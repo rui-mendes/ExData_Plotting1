@@ -24,3 +24,12 @@ plot(datetime, subsetData$Global_active_power, xlab="", ylab="Global Active Powe
 
 ## Plot 2nd graphich (Voltage field)
 plot(datetime, subsetData$Voltage, ylab="Voltage", type="l")
+
+## Plot 3rd graphich (Sub_metering_1 field)
+plot(datetime, subsetData$Sub_metering_1, xlab="", ylab="Energy sub metering", type="l")
+## Add points to 3rd graphich (Sub_metering_2 field)
+lines(datetime, subsetData$Sub_metering_2, xlab="", type="l", col="Red")
+## Add points to 3rd graphich (Sub_metering_3 field)
+lines(datetime, subsetData$Sub_metering_3, xlab="", type="l", col="Blue")
+# Place the legend at the appropriate place and put text in it (in 3rd Graphic)
+legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("Black", "Red", "Blue"), cex = 0.5, lwd=c(1,1,1), bty="n", y.intersp = 0.2) 
