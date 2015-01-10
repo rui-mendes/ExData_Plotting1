@@ -15,3 +15,6 @@ subsetData <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 ## Convert the Date and Time variables to Date/Time classes in R
 aux <- as.Date(subsetData$Date, format="%d/%m/%Y")
 datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
+
+## Set mfrow graphical parameter to be 2x2 dimension for plotting 4 graphics in the same window
+par(mfrow=c(2,2))
