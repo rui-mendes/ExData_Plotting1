@@ -12,3 +12,6 @@ data <- read.table("data/household_power_consumption.txt", header=TRUE, sep=";",
 ## Subset the original dataset from the dates 2007-02-01 and 2007-02-02.
 subsetData <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
 
+## Convert the Date and Time variables to Date/Time classes in R
+aux <- as.Date(subsetData$Date, format="%d/%m/%Y")
+datetime <- strptime(paste(aux, subsetData$Time), format="%Y-%m-%d %H:%M:%S")
